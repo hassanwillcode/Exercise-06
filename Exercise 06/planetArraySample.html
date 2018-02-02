@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+    <style>
+        h3
+        {
+            color: green;
+        
+        }
+        
+        h5
+        {
+            color: red;
+        
+        }
+    
+    </style>
+    
+</head>
+
+<body>
+
+<div id="main">
+ 
+
+    
+</div> 
+
+<script>
+var planetNames = ["Jupiter", "Venus", "Saturn", "Mars", "Pluto"];
+var distancesFromEarth = [5.2, 0.72, 9.5, 1.5, 10.0];
+var sunnyInAugust = [false, true, false, true, true];
+
+    
+
+var myElement = document.getElementById("main");   
+    
+for(var i = 0; i < planetNames.length; i++)
+{
+  myElement.innerHTML += ("<h3>" + planetNames[i] + "<h3>" + "<br>");
+    
+  myElement.innerHTML += (distancesFromEarth[i] + "<br>");
+    
+  myElement.innerHTML += (sunnyInAugust[i] + "<br>");
+    
+  myElement.innerHTML += ("----------" + "<br>");  
+}
+    for(var i = 0; i < planetNames.length; i++)
+{
+    if(sunnyInAugust[i] === true)
+       {
+           myElement.innerHTML += ("<br>" + "Planet " +"<h5>"+planetNames[i]+"</h5>"+ " has sun in August " + sunnyInAugust[i] + "<br>");
+           
+           myElement.innerHTML += ("----------" + "<br>");  
+       }
+}
+</script>
+
+</body>
+</html>
